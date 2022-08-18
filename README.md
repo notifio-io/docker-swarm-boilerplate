@@ -33,13 +33,13 @@ The boilerplate contains all the necessary tools:
 
 ## System design
 
-### Routing
-
-![System design](./resources/diagrams/notifio-routing.drawio.png)
-
 ### Networking
 
 ![System design](./resources/diagrams/notifio-networking.drawio.png)
+
+### Routing
+
+![System design](./resources/diagrams/notifio-routing.drawio.png)
 
 ## Install
 
