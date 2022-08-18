@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  static-server:
+    image: registry.${APP_DOMAIN}/static-server:${APP_VERSION}
+    build: ./static-server
+    restart: always
+    networks:
+      - default
+    deploy:
+      placement:
+        constraints: [ node.role == worker ]
+  backend-server:
+    image: registry.${APP_DOMAIN}/backend-server:${APP_VERSION}
+    build: ./backend-server
+    restart: always
+    networks:
+      - default
+    deploy:
+      placement:
+        constraints: [ node.role == worker ]
+  reverse-proxy:
+    image: registry.${APP_DOMAIN}/reverse-proxy:${APP_VERSION}
+    build: ./reverse-proxy
+    depends_on:
+      - static-server
+      - backend-server
+    networks:
+      - routing
+      - default
+    deploy:
+      placement:
+        constraints: [ node.role == worker ]
+
+networks:
+  routing:
+    external: true
+  default:

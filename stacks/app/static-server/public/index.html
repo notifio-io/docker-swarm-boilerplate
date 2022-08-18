@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Hello there! Current environment: <span id="env">loading...</span></div>
+<script>
+    fetch('/api/environment')
+        .then(r => r.text())
+        .then(s => document.getElementById('env').innerText = s)
+</script>
+</body>
+</html>
