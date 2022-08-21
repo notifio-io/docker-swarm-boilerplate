@@ -1,6 +1,18 @@
 # Docker Swarm Boilerplate
 
-Some short description TBD
+_____
+
+<p align="center">
+<img src="./resources/logo/portainer.svg" height="80">
+<img src="./resources/logo/grafana.png" height="80">
+<img src="./resources/logo/registry.png" height="80">
+<img src="./resources/logo/prometheus2.png" height="80">
+</p>
+
+_____
+
+The purpose of this project is to create a universal boilerplate for web projects that would allow kickstarting a project in a matter of seconds having an infrastructure of enterprise standards.
+POC for a project might take hours, when deployment, setup of monitoring and logging sometimes takes days. This boilerplate have all the nessesary parts set up and available in matter of seconds without any sophisticated configuration.
 
 ## Features
 
