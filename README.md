@@ -14,6 +14,8 @@ _____
 The purpose of this project is to create a universal boilerplate for web projects that would allow kickstarting a project in a matter of seconds having an infrastructure of enterprise standards.
 POC for a project might take hours, when deployment, setup of monitoring and logging sometimes takes days. This boilerplate have all the nessesary parts set up and available in matter of seconds without any sophisticated configuration.
 
+Philosophy here
+
 ## Features
 
 ### Multiple environments and scalability
@@ -51,7 +53,33 @@ The boilerplate contains all the necessary tools:
 
 ### Routing
 
-![System design](./resources/diagrams/notifio-routing.drawio.png)
+<img align="right" width="400" src="./resources/diagrams/notifio-routing.drawio.png">
+
+#### prometheus.*
+
+Prometheus desc
+
+#### grafana.*
+
+Grafana desc
+
+#### portainer.*
+
+Portainer desc
+
+#### registry.*
+
+Registry desc
+
+#### staging.*
+
+Staging desc
+
+#### www.*
+
+Production eesc
+
+___
 
 ## Install
 
