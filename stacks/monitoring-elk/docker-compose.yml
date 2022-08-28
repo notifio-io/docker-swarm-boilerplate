@@ -60,7 +60,7 @@ services:
 
 networks:
   elk:
-    driver: bridge
+    driver: overlay
   routing:
     external: true
 
