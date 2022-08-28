@@ -21,7 +21,7 @@ services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.4.0
     volumes:
-      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
       - elasticsearch:/usr/share/elasticsearch/data:z
     environment:
       ES_JAVA_OPTS: -Xms512m -Xmx512m
@@ -38,7 +38,7 @@ services:
   logstash:
     image: docker.elastic.co/logstash/logstash:8.4.0
     volumes:
-      - ./logstash/logstash.yml:/usr/share/logstash/config/logstash.yml:ro,Z
+      - ./logstash/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro,Z
     environment:
       LS_JAVA_OPTS: -Xms256m -Xmx256m
