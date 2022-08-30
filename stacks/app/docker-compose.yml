@@ -9,6 +9,7 @@ services:
     deploy:
       placement:
         constraints: [ node.role == worker ]
+
   backend-server:
     image: registry.${APP_DOMAIN}/backend-server:${APP_VERSION}
     build: ./backend-server
@@ -18,6 +19,7 @@ services:
     deploy:
       placement:
         constraints: [ node.role == worker ]
+
   reverse-proxy:
     image: registry.${APP_DOMAIN}/reverse-proxy:${APP_VERSION}
     build: ./reverse-proxy
@@ -26,12 +28,15 @@ services:
       - backend-server
     networks:
       - routing
+      - logging_logging
       - default
     deploy:
       placement:
         constraints: [ node.role == worker ]
 
 networks:
+  logging_logging:
+    external: true
   routing:
     external: true
   default:
